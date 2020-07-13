@@ -38,7 +38,7 @@ interface URLParse {
     readonly pathname: string;
     readonly port: string;
     readonly protocol: string;
-    readonly query: { [key: string]: string | undefined };
+    readonly query: { [key: string]: string | undefined } | string;
     readonly slashes: boolean;
     readonly username: string;
     set(part: URLParse.URLPart, value: string | object | number | undefined, fn?: boolean | URLParse.QueryParser): URLParse;
